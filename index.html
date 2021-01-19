@@ -6,6 +6,8 @@ function createButton(value) {
   button.innerHTML = value
   document.getElementById("buttonchoices").appendChild(button)
 }
+function changeImage(value) document.getElementById("textimage").innerHTML = value
+function changeText(value) document.getElementById("textmessage").innerHTML = value
 </script>
 <title>
 Game 0.1.0
@@ -14,6 +16,6 @@ Game 0.1.0
 <body>
 <b>Democracy Game 0.1.0</b>
 <p id=textimage>Text-Image</p>
-<p id=textchoices>Text-Choices</p>
+<p id=textmessage>Text-Message</p>
 <div id=buttonchoices></div>
 </body>
