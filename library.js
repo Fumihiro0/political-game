@@ -1,3 +1,7 @@
+//Values
+var currency = 100;
+var karma = 0;
+
 function createButton(value) {
   var button = document.createElement("BUTTON");
   button.innerHTML = value;
