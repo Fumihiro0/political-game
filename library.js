@@ -7,5 +7,12 @@ function createButton(value) {
   button.innerHTML = value;
   document.getElementById("buttonchoices").appendChild(button);
 }
+
+function test() {
+  fetch('file.txt')
+  .then(response => response.text())
+  .then(text => console.log(text))
+}
+
 function changeImage(value) {document.getElementById("textimage").innerHTML = value}
 function changeText(value) {document.getElementById("textmessage").innerHTML = value}
