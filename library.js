@@ -9,7 +9,7 @@ function createButton(value) {
 }
 
 function test() {
-  fetch('file.txt')
+  fetch('https://raw.githubusercontent.com/Starlight-Developers/political-game/main/file.txt')
   .then(response => response.text())
   .then(text => console.log(text))
 }
