@@ -12,6 +12,7 @@ function createButton(value, leadto) {
   button.onclick = function()
   {
     fetch('https://github.com/Starlight-Developers/political-game/tree/main/text-images/'+leadto)
+    console.log('https://github.com/Starlight-Developers/political-game/tree/main/text-images/'+leadto)
     .then(response => response.text())
     .then(text => changeImage(text))
   };
