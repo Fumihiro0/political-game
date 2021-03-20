@@ -2,7 +2,7 @@
 var currency = 100;
 var karma = 0;
 
-function changeImage(value) {document.getElementById("textimage").innerHTML = value}
+function changeImage(value) {document.getElementById("textimage").src = value}
 function changeText(value) {document.getElementById("textmessage").innerHTML = value}
 
 function createButton(value, leadto) {
@@ -11,8 +11,6 @@ function createButton(value, leadto) {
   document.getElementById("buttonchoices").appendChild(button);
   button.onclick = function()
   {
-    fetch('https://raw.githubusercontent.com/Starlight-Developers/political-game/main/text-images/'+leadto)
-    .then(response => response.text())
-    .then(text => changeImage(text))
+    changeImage("https://raw.githubusercontent.com/Starlight-Developers/political-game/main/images/"+leadto+".png");
   };
 }
