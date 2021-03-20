@@ -10,6 +10,9 @@ img {
     image-rendering: optimize-contrast;
     -ms-interpolation-mode: nearest-neighbor;
 }
+article {
+    float: left;
+}
 body {background-color: black;}
 p {color: white;}
 b {color: white;}
@@ -24,7 +27,7 @@ Game 0.3.0
 <b>Democracy Game 0.3.0</b>
 <br>
 <img src="images/black.png" id="image" height=256 width=256></img>
-<p id=textmessage style="display:inline">Text-Message</p>
+<message id=textmessage>Text-Message</message>
 <div id=buttonchoices></div>
 <p id=money>Money: </p>
 <p id=karma>Reputation: </p>
