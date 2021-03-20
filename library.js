@@ -16,9 +16,7 @@ function createButton(value, leadto, changeImageBool) {
      fetch('code-run/'+leadto+'.js')
     .then(response => response.text())
     .then(text => eval(text))
-    setTimeout(function() {
-    document.getElementById("money").innerHTML = "Money: "+currency
-    document.getElementById("karma").innerHTML = "Reputation: "+karma
-    }, 10);
+    .then(document.getElementById("money").innerHTML = "Money: "+currency)
+    .then(document.getElementById("karma").innerHTML = "Reputation: "+karma)
   };
 }
