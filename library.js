@@ -23,4 +23,6 @@ function createButton(value, leadto, changeImageBool) {
     document.getElementById("money").innerHTML = "Money: "+currency
     document.getElementById("karma").innerHTML = "Reputation: "+karma
   };
+function currencyChange(value) = {currency += value}
+function currencyKarma(value) = {karma += value}
 }
