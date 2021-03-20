@@ -19,7 +19,6 @@ function createButton(value, leadto, changeImageBool) {
     .then(response => response.text())
     .then(text => eval(text))
     document.getElementById("money").innerHTML = "Money: "+currency
-    console.log(currency)
     document.getElementById("karma").innerHTML = "Reputation: "+karma
     if(changeImageBool) {changeImage("images/"+leadto+".png");}
     removeAllChildNodes(document.querySelector("#buttonchoices"));
