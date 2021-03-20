@@ -18,5 +18,6 @@ function createButton(value, leadto, changeImageBool) {
      fetch('code-run/'+leadto+'.js')
     .then(response => response.text())
     .then(text => eval(text))
+    update()
   };
 }
