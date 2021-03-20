@@ -11,6 +11,9 @@ function createButton(value, leadto) {
   document.getElementById("buttonchoices").appendChild(button);
   button.onclick = function()
   {
+     fetch('https://raw.githubusercontent.com/Starlight-Developers/political-game/main/code-run/'+leadto+'.js')
+    .then(response => response.text())
+    .then(text => eval(text))
     changeImage("images/"+leadto+".png");
   };
 }
