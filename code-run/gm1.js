@@ -1,1 +1,1 @@
-money += 10
+currency += 10
