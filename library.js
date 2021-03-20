@@ -20,5 +20,7 @@ function createButton(value, leadto) {
     .then(text => eval(text))
     changeImage("images/"+leadto+".png");
     removeAllChildNodes(document.querySelector("#buttonchoices"));
+    document.getElementById("money").innerHTML = "Money: "+currency
+    document.getElementById("karma").innerHTML = "Reputation: "+karma
   };
 }
