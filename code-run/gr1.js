@@ -1,1 +1,1 @@
-karma += 10
+currencyKarma(10)
