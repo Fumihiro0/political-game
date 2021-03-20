@@ -1,1 +1,1 @@
-currencyChange(10)
+currency += 10
