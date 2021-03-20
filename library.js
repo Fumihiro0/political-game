@@ -9,7 +9,7 @@ function removeAllChildNodes(parent) { // totally wrote this myself
         parent.removeChild(parent.firstChild);
     }
 }
-function createButton(value, leadto) {
+function createButton(value, leadto, changeImageBool) {
   var button = document.createElement("BUTTON");
   button.innerHTML = value;
   document.getElementById("buttonchoices").appendChild(button);
@@ -18,7 +18,7 @@ function createButton(value, leadto) {
      fetch('https://raw.githubusercontent.com/Starlight-Developers/political-game/main/code-run/'+leadto+'.js')
     .then(response => response.text())
     .then(text => eval(text))
-    changeImage("images/"+leadto+".png");
+    if(changeImageBool) {changeImage("images/"+leadto+".png");}
     removeAllChildNodes(document.querySelector("#buttonchoices"));
     document.getElementById("money").innerHTML = "Money: "+currency
     document.getElementById("karma").innerHTML = "Reputation: "+karma
