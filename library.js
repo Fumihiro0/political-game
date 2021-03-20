@@ -15,7 +15,7 @@ function createButton(value, leadto, changeImageBool) {
   document.getElementById("buttonchoices").appendChild(button);
   button.onclick = function()
   {
-     fetch('main/code-run/'+leadto+'.js')
+     fetch('code-run/'+leadto+'.js')
     .then(response => response.text())
     .then(text => eval(text))
     if(changeImageBool) {changeImage("images/"+leadto+".png");}
