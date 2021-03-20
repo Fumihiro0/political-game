@@ -12,6 +12,7 @@ function createButton(value, leadto, changeImageBool) {
   button.onclick = function()
   {
      removeAllChildNodes(document.querySelector("#buttonchoices"));
+     if(changeImageBool) {changeImage("images/"+leadto+".png");}
      fetch('code-run/'+leadto+'.js')
     .then(response => response.text())
     .then(text => eval(text))
@@ -19,6 +20,5 @@ function createButton(value, leadto, changeImageBool) {
     document.getElementById("money").innerHTML = "Money: "+currency
     document.getElementById("karma").innerHTML = "Reputation: "+karma
     }, 10);
-    if(changeImageBool) {changeImage("images/"+leadto+".png");}
   };
 }
