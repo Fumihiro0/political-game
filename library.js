@@ -5,6 +5,8 @@ var karma = 0;
 function changeImage(value) {document.getElementById("image").src = value}
 function changeText(value) {document.getElementById("textmessage").innerHTML = value}
 function removeAllChildNodes(parent) {/*totally wrote this myself*/while (parent.firstChild) { parent.removeChild(parent.firstChild);}}
+function update() {/*timeouts are bad so*/document.getElementById("money").innerHTML = "Money: "+currency;document.getElementById("karma").innerHTML = "Reputation: "+karma}
+
 function createButton(value, leadto, changeImageBool) {
   var button = document.createElement("BUTTON");
   button.innerHTML = value;
@@ -16,7 +18,5 @@ function createButton(value, leadto, changeImageBool) {
      fetch('code-run/'+leadto+'.js')
     .then(response => response.text())
     .then(text => eval(text))
-    .then(document.getElementById("money").innerHTML = "Money: "+currency)
-    .then(document.getElementById("karma").innerHTML = "Reputation: "+karma)
   };
 }
