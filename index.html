@@ -12,6 +12,12 @@ img {
 }
 article {
     float: left;
+    color: white;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 body {background-color: black;}
 p {color: white;}
@@ -26,8 +32,10 @@ Game 0.3.0
 <body>
 <b>Democracy Game 0.3.0</b>
 <br>
+<section>
 <img src="images/black.png" id="image" height=256 width=256></img>
 <message id=textmessage>Text-Message</message>
+</section>
 <div id=buttonchoices></div>
 <p id=money>Money: </p>
 <p id=karma>Reputation: </p>
