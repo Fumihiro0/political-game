@@ -11,15 +11,14 @@ function createButton(value, leadto, changeImageBool) {
   document.getElementById("buttonchoices").appendChild(button);
   button.onclick = function()
   {
+     removeAllChildNodes(document.querySelector("#buttonchoices"));
      fetch('code-run/'+leadto+'.js')
     .then(response => response.text())
     .then(text => eval(text))
     setTimeout(function() {
     document.getElementById("money").innerHTML = "Money: "+currency
     document.getElementById("karma").innerHTML = "Reputation: "+karma
-    }, 500);
-
+    }, 100);
     if(changeImageBool) {changeImage("images/"+leadto+".png");}
-    removeAllChildNodes(document.querySelector("#buttonchoices"));
   };
 }
