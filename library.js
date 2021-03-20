@@ -18,7 +18,7 @@ function createButton(value, leadto, changeImageBool) {
     setTimeout(function() {
     document.getElementById("money").innerHTML = "Money: "+currency
     document.getElementById("karma").innerHTML = "Reputation: "+karma
-    }, 100);
+    }, 10);
     if(changeImageBool) {changeImage("images/"+leadto+".png");}
   };
 }
