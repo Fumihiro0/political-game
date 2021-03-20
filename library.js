@@ -2,7 +2,7 @@
 var currency = 100;
 var karma = 0;
 
-function changeImage(value) {document.getElementById("textimage").src = value}
+function changeImage(value) {document.getElementById("image").src = value}
 function changeText(value) {document.getElementById("textmessage").innerHTML = value}
 
 function createButton(value, leadto) {
