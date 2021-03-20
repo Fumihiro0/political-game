@@ -1,3 +1,3 @@
 window.onload = function(e) {
-  createButton("Run", "intro", true)
+  createButton("Start", "intro", true)
 }
