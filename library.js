@@ -15,5 +15,8 @@ function createButton(value, leadto) {
     .then(response => response.text())
     .then(text => eval(text))
     changeImage("images/"+leadto+".png");
+    while (document.getElementById("buttonchoices").firstChild) {
+      document.getElementById("buttonchoices").removeChild(document.getElementById("buttonchoices").firstChild);
+    }
   };
 }
